@@ -17,4 +17,5 @@ while chute != numero:
         else:
             print("O valor digitado foi abaixo do esperado!\n");
             chute = int(input("Digite um número de 1 a 10:\n"));
-print("Parabéns você acertou o número aleatório. O valor esperado era: %d" %(numero));
+print("Parabéns você acertou o número aleatório. O valor esperado era: %d" %(numero));5
+

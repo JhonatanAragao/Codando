@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta htpp-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Sequência Numérica</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        font-size: 20px;
+        text-align: center;
+    }
+    #caixa {
+        display: inline-block;
+    }
+    #numeroAtual {
+        margin-top: 25px;
+        font-size: 45px;
+    }
+    #numeroInicial{
+        width: 200px;
+        height: 30px;
+        font-size: 15px;
+    }
+    #botao{
+        width: 50px;
+        height: 35px;
+        background-color: #3CB371;
+    }
+    #retorno{
+        width: 50px;
+        height: 35px;
+        background-color: #B0E0E6;
+    }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>Sequência numérica</h1>
+
+    <div id="caixa">
+        <input id="numeroInicial" type="number" name="numeroInicial" placeholder="Digite o valor inicial">
+        <button onclick="clickbotao()" id="botao">Start</button>
+        <button onclick="retorno()" id="retorno">Sub</button> <!--botão para voltar -1 número da sequência-->
+    </div>
+
+    <div id="numeroAtual" onmouseout="proximoNumero()"></div>
+    <div id="erro"></div>
+
+
+
+    <script>
+
+      function clickbotao(){
+        let numeroInicial = parseInt(document.getElementById("numeroInicial").value);
+        if (isNaN(numeroInicial)){ //verificando se a caixa input não está vazia;
+            document.getElementById("erro").innerHTML = "Digite um valor inicial!";
+            document.getElementById("numeroAtual").innerHTML = ""; //zerando resultado caso o usuário inicie um valor e depois volte a deixar a caixa de input vazia;
+        }
+        else {
+            document.getElementById("numeroAtual").innerHTML = numeroInicial;
+            document.getElementById("erro").innerHTML = "";
+        }
+      }
+
+      function proximoNumero(){
+        let numeroAtual = parseInt(document.getElementById("numeroAtual").innerHTML);
+        let proximoNumero = parseInt(numeroAtual + 1);
+        document.getElementById("numeroAtual").innerHTML = proximoNumero;
+
+    }
+
+        function retorno(){
+            let numeroInicial = parseInt(document.getElementById("numeroInicial").value);
+            let numeroAtual = document.getElementById("numeroAtual").innerHTML;
+            let sub = parseInt(numeroAtual - 1);
+            if (isNaN(numeroInicial)){
+                return;
+            }
+            else{
+                document.getElementById("numeroAtual").innerHTML = sub;
+        }
+
+        }
+
+    </script>
+  </body>
+</html>

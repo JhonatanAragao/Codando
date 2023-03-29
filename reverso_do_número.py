@@ -7,5 +7,6 @@ def inverte_numero(numero):
     numero_invertido = int(numero_invertido);
     return numero_invertido;
 
-print(inverte_numero(int(input("Digite um número:\n"))));
 
+numero_invertido = inverte_numero(int(input("Digite um número inteiro para saber sua ordem inversa:\n")));
+print("O número ordenado no inverso fica: %d\n" %numero_invertido);
