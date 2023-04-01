@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+/*Início div's*/
+#caixa {
+    display: inline-block;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+#numeroAtual {
+    margin-top: 25px;
+    font-size: 45px;
+    border: 1px solid black;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 8px 8px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 20px;
+
+}
+
+#numeroInicial{
+    width: 200px;
+    height: 30px;
+    font-size: 15px;
+}
+#botao{
+    width: 50px;
+    height: 35px;
+    background-color: #3CB371;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#retorno{
+    width: 50px;
+    height: 35px;
+    background-color: #B0E0E6;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#erro{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+}
+/*Fim div's*/
+
+
+.container{
+    margin-top: 50px;
+}
+
+button:hover {
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+

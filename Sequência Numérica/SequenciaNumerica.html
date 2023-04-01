@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="device-width, initial-scale=1.0">
+    <title>Sequência Numérica</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <h1>Sequência numérica</h1>
+
+    <div id="caixa">
+        <input id="numeroInicial" type="number" name="numeroInicial" placeholder="Digite o valor inicial">
+        <button onclick="clickbotao()" id="botao">Start</button>
+        <button onclick="retorno()" id="retorno">Sub</button> <!--botão para voltar -1 número da sequência-->
+    </div>
+
+    <div class="container">
+        <div id="numeroAtual" onmouseout="proximoNumero()"><span>0</span></div>
+        <div id="erro"></div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
+</html>
